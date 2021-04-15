@@ -1,6 +1,18 @@
-# SlitherIntoPython_DiscordBot
+# CorpHackRyan - Discord Bot
 
-1/5/21 - Did my first upload to Github. My initial goal with this discord bot was to be a community grown bot so that we all could learn together.
-That's why there ton's of descriptions in the code...trying to explain what each interaction does with Discord.
+Discord bot is a bot that can be hosted on any server and be modified to fit your server needs. I created this bot to experiment with the discord.py functionality. 
 
-Using the discord.py library on Python 3.9
+Check it out in action at my Learn Python server I created to help people (and myself) to learn python. 
+
+Head over to my Learn Python server on discord -> https://discord.gg/6aRv8ft <- and see the bot in action!
+
+# COMMANDS
+!membercount - will return the total members in your 
+
+'bad bot'    - random message sent to channel
+
+'good bot'   - random message sent to channel  
+
+
+# SCREENSHOTS
+![](example.png)

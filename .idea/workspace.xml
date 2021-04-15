@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac635192-08fd-4fa2-8891-1cc9f71686b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/bot_v1a.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot_v1a.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +32,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618500027321</updated>
-      <workItem from="1618500030606" duration="573000" />
+      <workItem from="1618500030606" duration="1385000" />
     </task>
     <task id="LOCAL-00001" summary="Update README.md">
       <created>1618500157142</created>
@@ -41,7 +41,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618500157142</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Cleaned up bot_v1a.py file">
+      <created>1618500628014</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1618500628014</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -49,6 +56,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
+    <MESSAGE value="Cleaned up bot_v1a.py file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up bot_v1a.py file" />
   </component>
 </project>
