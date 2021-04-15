@@ -1,9 +1,4 @@
-# bot.py
-# Tutorial used: https://realpython.com/how-to-make-a-discord-bot-python/
 # All the available API's available on Discord: https://discordpy.readthedocs.io/en/latest/api.html#
-
-# Made for LearnPython server as a collaborative effort to make the best dam bot we can
-# and learn as much as we can!
 
 import os
 import discord
@@ -12,33 +7,18 @@ import random
 from dotenv import load_dotenv
 
 
-
-# This loads the environment variables into memory from a .env file which contains the token and
-# server name to connect to
+# Load environment variables - Token required for Discord
 load_dotenv("bottoken.env")
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
-
-# Just printing the token below on screen to see how it loads it from the .env file above
-print(TOKEN)
 
 # As of discord.py v1.5.0, you are required to use Intents for your bot, you can read more about
 # them by clicking link below. (This deviates from the initial tutorial but is a requirement to work properly.
 # https://discordpy.readthedocs.io/en/latest/api.html#discord.Intents
 
-# A Client is an object that represents a connection to Discord. A Client handles events,
-# tracks state, and generally interacts with Discord APIs.
-# Also, when I crated my bot in the Discord developer portal, I had to go under the Bot tab and enable the
 # Presence Intent switch. Otherwise, this will not work.
 intents = discord.Intents.all()
-# client = discord.Client(intents=intents)
 client = commands.Bot(command_prefix="!", intents=intents)
-
-# on_ready is an event handler
-# which handles the event when the Client has established a connection to
-# Discord and it has finished preparing the data that Discord has sent
-# on_ready() will be called (and message will be printed) once client is ready for further action
-
 
 
 # There's 2 different ways to use this function. If we don't include the '*' then it will only return
@@ -47,7 +27,6 @@ client = commands.Bot(command_prefix="!", intents=intents)
 @client.command()
 async def password(ctx, *, var):
     await ctx.send(var)
-
     password_input = var
 
     # This is the next bit of code I need to write to execute the password and spit it back to user
@@ -55,10 +34,12 @@ async def password(ctx, *, var):
 
 @client.event
 async def on_ready():
-    print(f'{client.user} has connected to Discord!')
+    # on_ready is an event handler which handles the event when client has connected to discord bot
+    # and it has finished preparing the data that Discord has sent
+    # on_ready() will be called (and message will be printed) once client is ready for further action
 
-    # The below prints the guild (also known as server) information: the name & id received from the
-    # discord server client
+    # Print server info (name/id from discord)
+    print(f'{client.user} has connected to Discord!')
     print(client.guilds)
 
     # The below prints the guild name loaded from the .env file
@@ -145,10 +126,6 @@ async def on_ready():
             ),
         ]
 
-        if message.content == '!99':
-            response = random.choice(brooklyn_99_quotes)
-            await message.channel.send(response)
-
         if message.content == '!membercount':
             await message.channel.send(f'There are {guild.member_count} members in the {guild.name} guild')
 
@@ -158,17 +135,12 @@ async def on_ready():
         if message.content == 'good bot':
             await message.channel.send('Ahh.. you finally programmed me the way you want me to be!')
 
-        if message.content == 'bryans cool':
-            await message.channel.send('My boy BRIAN D is the fucking MAN on guitar!')
-
         if message.content == '!robots_use':
             await message.channel.send('My use is to serve you sire. Your wish is my command. Whatever thee asks, '
                                        'ye shall get.')
 
         # This overrides the the default on_message from any commands being used
         await client.process_commands(message)
-
-
 
     @client.event
     async def on_member_join(member):
@@ -177,7 +149,6 @@ async def on_ready():
                            f"for the servers rules and guidelines. The <#772864039406927902> room contains information "
                            f"containing our discussion meetup times. "
                            f"We hope you enjoy your stay!")
-
 
 client.run(TOKEN)
 
